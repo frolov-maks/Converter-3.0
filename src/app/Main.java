@@ -2,7 +2,7 @@ package app;
 
 public class Main {
 
-    private static byte koef = 32;
+    private static byte TEMP_SHIFT = 32;
 
     public static void main (String[] args) {
         System.out.println("Converter app v. 3.0");
@@ -17,9 +17,9 @@ public class Main {
         System.out.printf("Result is %.2f Fahrenheit degrees%n", C);
     }
     private static double converteFarToCel(double far) {
-        return (far - koef) * 5/9;
+        return (far - TEMP_SHIFT) * 5/9;
     }
     private static double convertCelToFar(double cel) {
-        return (cel * 9/5) + koef;
+        return (cel * 9/5) + TEMP_SHIFT;
     }
 }
